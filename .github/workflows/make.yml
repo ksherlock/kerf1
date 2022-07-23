@@ -13,3 +13,9 @@ jobs:
       run: cd src ; make
     - name: test
       run: cd src ; ./kerf_test
+
+    - name: Archive
+      uses: actions/upload-artifact@v3
+      with:
+        name: kerf
+        path: src/kerf
